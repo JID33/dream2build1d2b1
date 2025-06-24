@@ -1,108 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idreams2build1 - Données & Micro-Business</title>
-  <meta name="description" content="Plateforme solidaire de services numériques et d'entrepreneuriat collaboratif. Rejoignez-nous pour la saisie de données ou créer un micro-business." />
-  <meta property="og:title" content="Idreams2Build1 - Données & Micro-Business" />
-  <meta property="og:description" content="Coopération solidaire, micro-business tournants et services professionnels à distance." />
-  <meta property="og:image" content="https://drive.google.com/uc?export=view&id=17Jochcyvz6RJeOyYDunbjzfFaH8Ds6SF" />
-  <meta property="og:type" content="website" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-green-700 text-white py-6">
-    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-      <div class="flex items-center space-x-4">
-        <img src="https://drive.google.com/uc?export=view&id=17Jochcyvz6RJeOyYDunbjzfFaH8Ds6SF" alt="Logo" class="w-12 h-12 object-contain rounded">
-        <div>
-          <h1 class="text-3xl font-bold">Dream 2 Build 1</h1>
-          <p class="text-sm">L’union fait le capital — Données & Coopération Entrepreneuriale</p>
-        </div>
-      </div>
-      <nav class="mt-4 sm:mt-0 space-x-4">
-        <a href="#donnees" class="text-white hover:underline">Saisie & Données</a>
-        <a href="#business" class="text-white hover:underline">Micro-Business</a>
-        <a href="#rejoindre" class="text-white hover:underline">Rejoindre</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="py-10 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Bienvenue sur notre plateforme</h2>
-      <p class="text-gray-600 text-sm mb-2">Notre mission : faciliter l’accès à des services professionnels de traitement de données tout en construisant une solidarité économique autour des micro-entreprises.</p>
-      <p class="mb-4">Nous sommes un groupe de professionnels spécialisés dans la saisie, le traitement et la gestion de données numériques. Notre objectif est d'offrir des services fiables et abordables aux entreprises et aux particuliers.</p>
-      <p>En parallèle, nous développons un modèle de financement solidaire pour soutenir la création de micro-entreprises à rotation rapide.</p>
-    </div>
-  </section>
-
-  <section id="donnees" class="bg-white py-10 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Services de Saisie & Traitement de Données</h2>
-      <p class="text-gray-600 text-sm mb-2">Voici un aperçu des prestations que nous proposons à distance ou en partenariat.</p>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Saisie manuelle ou automatisée</li>
-        <li>Nettoyage et structuration de données</li>
-        <li>Conversion de formats (PDF, Word, Excel)</li>
-        <li>Transcription audio/vidéo</li>
-        <li>Archivage numérique et indexation</li>
-        <li>Support administratif délocalisé</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="business" class="bg-gray-50 py-10 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Système solidaire de Micro-Business</h2>
-      <p class="mb-4">Nous avons mis en place un système coopératif où chaque membre peut bénéficier d’un financement rotatif pour lancer une petite activité génératrice de revenus.</p>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Vente de produits alimentaires (boutique, marché)</li>
-        <li>Commerce en ligne (vêtements, recharges, etc.)</li>
-        <li>Services : barber shop, coiffure, réparation mobile, etc.</li>
-      </ul>
-      <p class="mt-4">Le principe est simple : un cycle de financement solidaire avec rotation mensuelle et suivi par un tableau partagé. Chacun bénéficie à tour de rôle.</p>
-    </div>
-  </section>
-
-  <section id="rejoindre" class="bg-white py-10 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Rejoignez la coopérative</h2>
-      <form class="space-y-4" action="https://formsubmit.co/ejeambas@gmail.com" method="POST" onsubmit="return showConfirmation(event)">
-        <input type="text" name="name" placeholder="Votre nom complet" required class="w-full px-4 py-2 border rounded">
-        <input type="email" name="email" placeholder="Adresse e-mail" required class="w-full px-4 py-2 border rounded">
-        <textarea name="message" placeholder="Votre motivation ou expérience" required class="w-full px-4 py-2 border rounded"></textarea>
-        <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800">Envoyer</button>
-      </form>
-      <p id="success-message" class="text-green-600 mt-4 hidden">Merci pour votre message ! Nous vous contacterons bientôt.</p>
-    </div>
-  </section>
-
-  <footer class="bg-green-800 text-white text-center py-6 mt-10">
-    <p>&copy; 2025 Idreams2build1 - L’union fait le capital. Tous droits réservés.</p>
-  </footer>
-
-  <script>
-    function showConfirmation(event) {
-      event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          document.getElementById('success-message').classList.remove('hidden');
-          form.reset();
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coopérative D2B1 Solidaire</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4faff;
+      color: #0a2540;
     }
-  </script>
+    header {
+      background-color: #d0ecff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #0a2540;
+    }
+    header p {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border: 1px solid #cbe4f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .faq ul {
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #e0f0ff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Coopérative D2B1 Solidaire</h1>
+  <p>Ensemble, nous bâtissons notre avenir.<br>
+  Une coopérative solidaire pour le financement local, par la communauté et pour la communauté.</p>
+</header>
+
+<section class="section">
+  <h2>Nos Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>💸 Épargne solidaire</h3>
+      <p>Cotisation régulière mensuelle pour les membres.</p>
+    </div>
+    <div class="card">
+      <h3>🔁 Crédit rotatif</h3>
+      <p>Prêts tournants entre membres selon un calendrier.</p>
+    </div>
+    <div class="card">
+      <h3>🛠️ Financement de projets</h3>
+      <p>Demande de micro-financement pour projets locaux.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Participation aux décisions</h3>
+      <p>Assemblées virtuelles ou sondages communautaires.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Espace Membre Sécurisé</h3>
+      <a href="#" class="button">Connexion</a>
+    </div>
+    <div class="card">
+      <h3>🧑‍🤝‍🧑 Devenir Membre</h3>
+      <a href="#" class="button">Rejoindre</a>
+    </div>
+    <div class="card">
+      <h3>📋 Projets financés</h3>
+      <a href="#" class="button">Voir</a>
+    </div>
+    <div class="card">
+      <h3>📄 Documents et règlements</h3>
+      <a href="#" class="button">Lire</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>FAQ Coopérative</h2>
+  <div class="faq">
+    <ul>
+      <li>Qui peut devenir membre ?</li>
+      <li>Comment les rotations fonctionnent-elles ?</li>
+      <li>Que se passe-t-il si un membre ne paie pas ?</li>
+      <li>Peut-on quitter la coopérative ?</li>
+      <li>Comment les décisions sont-elles prises ?</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  📩 contact@d2b1solidaire.fr |
+  <a href="#">Rejoindre la coopérative</a> |
+  <a href="#">Voir les règles</a>
+</footer>
+
 </body>
 </html>
